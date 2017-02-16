@@ -1,0 +1,99 @@
+<!-- from https://metinmediamath.wordpress.com/2013/11/27/how-to-calculate-the-elo-rating-including-example/ -->
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Elo Rating Scratch</title>
+    <!-- todo delete below before publishing -->
+    <meta http-equiv="refresh" content="60"> </head>
+
+  <body>
+
+    <div class="container">
+      <h1>Trying Out Elo Ratings</h1>
+      <p>Player 1 Rating: <span id="1">error or unfinished</span></p>
+      <p>Player 2 Rating: <span id="1.1">error or unfinished</span></p>
+      <hr>
+      <p>Player 1 Transformed Rating R(1) 10<sup>R(1)/400</sup>: <span id="1.2">error or unfinished</span></p>
+      <p>Player 2 Transformed Rating R(2) 10<sup>R(2)/400</sup>: <span id="1.3">error or unfinished</span></p>
+      <hr>
+      <p>Expected Player 1 E(1) = R(1) / (R(1) + R(2)): <span id="2">error or unfinished</span></p>
+      <p>Expected Player 2 E(2) = R(2) / (R(1) + R(2)): <span id="3">error or unfinished</span></p>
+      <hr>
+      <p>Player 1 Rating Change: <span id="4">error or unfinished</span></p>
+      <p>Player 2 Rating Change: <span id="5">error or unfinished</span></p>
+      <hr>
+      <p>Player 1 New Rating: <span id="6">error or unfinished</span></p>
+      <p>Player 2 New Rating: <span id="7">error or unfinished</span></p>
+      <hr>
+      <p id="10">Sentence goes here</p>
+    </div>
+    <script>
+      // variables
+      var player = [];
+      player.push({
+        initialrating: 2400,
+        k: 32
+      }, {
+        initialrating: 2000,
+        k: 32
+      });
+
+player[0].expected = 800;
+
+      console.log("player 1 initial rating is " + player[1].initialrating)
+      var playera = {
+        initialrating: 2400
+      };
+      var playerb = {
+        initialrating: 2000
+      };
+      var k = 32
+      updateView(1, player[0].initialrating);
+      updateView(1.1, player[1].initialrating);
+      updateView(1.2, transformedrating(player[0].initialrating));
+      updateView(1.3, transformedrating(player[1].initialrating));
+      updateView(2, getExpectedScore(0,1));
+// updateView(2, expecteda(transformedrating(player[0].initialrating), transformedrating(player[1].initialrating)));
+  // updateView(1.3, transformedrating(player[1].initialrating));
+      // document.getElementById("1.1").innerHTML = playerb.initialrating;
+      // document.getElementById("1.2").innerHTML = transformedrating(playera.initialrating);
+      // document.getElementById("1.3").innerHTML = transformedrating(playerb.initialrating);
+      // document.getElementById("2").innerHTML = expecteda(transformedrating(player[0].initialrating), transformedrating(player[1].initialrating));
+      document.getElementById("3").innerHTML = expectedb(transformedrating(player[0].initialrating), transformedrating(player[1].initialrating));
+      document.getElementById("10").innerHTML = "Player A has an expected score of " + playera.expected;
+
+      function updateView(domid, content) {
+        document.getElementById(domid).innerHTML = content;
+      }
+
+function getExpectedScore(playerid, otherplayerid){
+// receives array location of player and the array locatino of the other player
+    player[playerid].expected = transformedrating(player[playerid].initialrating) / (transformedrating(player[playerid].initialrating) + transformedrating(player[otherplayerid].initialrating));
+return player[playerid].expected;
+}
+
+      function expecteda(ratingA, ratingB) {
+        playera.expected = ratingA / (ratingA + ratingB);
+        return playera.expected;
+      }
+
+      function expectedb(ratingA, ratingB) {
+        playerb.expected = ratingB / (ratingA + ratingB);
+        return playerb.expected;
+      }
+
+      function transformedrating(initrating) {
+
+        return (Math.pow(10, (initrating / 400)));
+      }
+      // spits out a bunhc of console stuff
+      // for (var b in window) {
+      //   if (window.hasOwnProperty(b)) console.log(b);
+      // }
+
+    </script>
+  </body>
+
+</html>
