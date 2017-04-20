@@ -5,9 +5,11 @@
 /* @import url("https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css"); */
 
 
- @import url("https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css"); 
+ @import url("https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css");
 
-
+a{
+  color: #0a57ad;
+}
 /* @import url("https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css"); */
 
 
@@ -47,8 +49,8 @@
 /*@import url("https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css");*/
 
 
-/* @import url("https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css"); */ 
+/* @import url("https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css"); */
 
-@import url("https://elearn.pstcc.edu/d2l/shared/nothing.css"); 
+@import url("https://elearn.pstcc.edu/d2l/shared/nothing.css");
 
  /*bottom comment css file*/
