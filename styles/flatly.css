@@ -16,6 +16,9 @@
 
 @import url("https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css");
 
+a{
+  color: #07604e;
+}
 
 /*@import url("https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/journal/bootstrap.min.css");*/
 
@@ -47,8 +50,8 @@
 /*@import url("https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css");*/
 
 
-/* @import url("https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css"); */ 
+/* @import url("https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css"); */
 
-@import url("https://elearn.pstcc.edu/d2l/shared/nothing.css"); 
+@import url("https://elearn.pstcc.edu/d2l/shared/nothing.css");
 
  /*bottom comment css file*/
