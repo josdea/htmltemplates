@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- <title></title> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+    <style>
+        .container-fluid {
+            padding-top: 1.5rem;
+        }
+    </style>
+
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>Document Title Goes Here: C#</h1>
+        <p>Description of code etc. goes here.</p>
+        <p>Automatic Code Highlighting based on language. This uses highlight.js. Here are some
+            <a href="https://highlightjs.org/static/demo/"
+                target="_blank" rel="noopener noreferrer">available languages</a>. Each language is specified by the following:<br> &lt;pre&gt;&lt;code class="java"&gt; your
+            code here &lt;/code&gt;&lt;pre&gt;.&nbsp;</p>
+        <p>Use this
+            <a href="https://codebeautify.org/" target="_blank" rel="noopener noreferrer">code beautifier</a> first to create automatic tabs and indenting for your code. You must click the "
+            <strong>Publish/Update</strong>" button below to see highlighting.</p>
+        <pre><code class="cs"> 
+using System.IO.Compression;
+
+#pragma warning disable 414, 3021
+
+namespace MyApplication
+{
+    [Obsolete("...")]
+    class Program : IInterface
+    {
+        public static List<int> JustDoIt(int count)
+        {
+            Console.WriteLine($"Hello {Name}!");
+            return new List<int>(new int[] { 1, 2, 3 })
+        }
+    }
+}
+</code>
+</pre>
+    </div>
+</body>
+
+</html>
